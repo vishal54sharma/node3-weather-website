@@ -9,6 +9,8 @@ const hbs = require('hbs')
 
 const app = express()
 
+const port = process.env.PORT || 3000
+
 app.set("view engine", "hbs")
 
 app.set('views',path.join(__dirname,"../template/views"))
@@ -114,6 +116,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Server has been started started")
 })
